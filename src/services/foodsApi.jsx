@@ -9,3 +9,4 @@ export async function foodsApi() {
   return response.data.meals;
 }
 
+  
