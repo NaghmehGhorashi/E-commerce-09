@@ -7,6 +7,13 @@ const client = axios.create({
 export async function foodsApi() {
   const response = await client.get('/filter.php?c=Seafood');
   return response.data.meals;
-}
+} 
 
-  
+export async function foodApi(id) {
+  const respond = await client.get(`filter.php?c=Seafood/${id}`)
+  return respond  
+}
+export async function foodsApi() {
+  const response = await client.get('categories.php');
+  return response.data.meals;
+} 

@@ -2,14 +2,14 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { route } from './route.const';
 
-const RoutApp: React.FC = () => {
+const RouteApp: React.FC = () => {
   return (
     <Routes>
-      {route.map((r, index) => (
-        <Route key={index} path={r.path} element={r.element} />
+      {route.map((item, index) => (
+        <Route key={index} path={item.path} element={item.element} />
       ))}
     </Routes>
   );
 };
 
-export default RoutApp;
+export default RouteApp;

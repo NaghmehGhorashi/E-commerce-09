@@ -9,7 +9,7 @@ const Category = lazy(() => import('../pages/Category'));
 
 export const route: RouteObject[] = [
   {
-    path: '/Home',
+    path: '/',
     element: (
       <Layout>
         <Home />
