@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Food() {
-  return <div></div>;
+  return <div>hijsnk</div>;
 }
 
 export default Food;

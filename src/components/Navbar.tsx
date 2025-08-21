@@ -9,7 +9,9 @@ const Navbar: React.FC = () => {
     <Container>
       <nav className="flex justify-between items-center  text-yellow-200 px-6 h-16 relative z-50 mb-5">
         {/* Logo */}
-        <h1 className="text-xl font-bold">Taste of the World</h1>
+        <Link className="hover:text-white" to="/">
+          <h1 className="text-xl font-bold">Taste of the World</h1>
+        </Link>
 
         {/* Links */}
         <ul
@@ -18,29 +20,9 @@ const Navbar: React.FC = () => {
           } md:flex flex-col md:flex-row gap-6 list-none absolute md:static top-16 left-0 w-full md:w-auto bg-green-900 md:bg-transparent text-center md:text-left p-4 md:p-0`}
         >
           <li>
-            <Link className="hover:text-white" to="/">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link className="hover:text-white" to="/mensclothes">
-              Men
-            </Link>
-          </li>
-          <li>
-            <Link className="hover:text-white" to="/jewelry">
-              Women
-            </Link>
-          </li>
-          <li>
-            <Link className="hover:text-white" to="/">
-              Baby Collection
-            </Link>
-          </li>
-          <li>
-            <Link className="hover:text-white" to="/about">
+            {/* <Link className="hover:text-white" to="/about">
               Contact
-            </Link>
+            </Link> */}
           </li>
         </ul>
 
@@ -52,7 +34,7 @@ const Navbar: React.FC = () => {
             className="rounded bg-amber-50 px-2 py-1 w-48 text-red-800 "
           />
           <p className="cursor-pointer">Profile</p>
-          <p className="cursor-pointer">Cart</p>
+          {/* <p className="cursor-pointer">Cart</p> */}
         </div>
 
         {/* Burger Menu */}

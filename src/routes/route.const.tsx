@@ -3,7 +3,7 @@ import { RouteObject } from 'react-router-dom';
 import Layout from '../components/Layout';
 
 const Home = lazy(() => import('../pages/Home'));
-const Foods = lazy(() => import('../pages/Foods'));
+const Foods = lazy(() => import('../components/Foods'));
 const Food = lazy(() => import('../pages/Food'));
 const Category = lazy(() => import('../pages/Category'));
 
