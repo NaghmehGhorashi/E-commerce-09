@@ -7,7 +7,7 @@ function LottieSection() {
       <div className="w-10/12 h-px bg-gray-300 mt-4 mx-auto"></div>
       <div className="flex md:flex-row sm:flex-col ml-[100px]">
         <FoodLottie
-          className="md:ml-[50px]"
+          className="hidden sm:block md:ml-[50px]"
           size={220}
           autoplay
           loop

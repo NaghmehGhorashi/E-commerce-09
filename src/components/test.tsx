@@ -13,11 +13,7 @@ function test() {
       default:
         break;
     }
-    // <Routes>
-    //   {A.map((a) => (
-    //     <Route key={a.path} path={a.path} element={a.element} />
-    //   ))}
-    // </Routes>
+    
   );
 }
 

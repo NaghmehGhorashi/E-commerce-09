@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
@@ -7,10 +7,15 @@ type LayoutProps = {
 };
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+
   return (
     <div>
-      <Navbar />
-      {children}
+      <Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+
+      {React.isValidElement(children)
+        ? React.cloneElement(children, { searchTerm })
+        : children}
       <Footer />
     </div>
   );
