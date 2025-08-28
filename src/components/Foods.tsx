@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { foodsApi, searchMeals } from '../services/productApi';
+import { Link } from 'react-router-dom';
 
 interface Meal {
   idMeal: string;
@@ -58,14 +59,16 @@ const Foods: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {data.length > 0
           ? data.map((meal) => (
-              <div key={meal.idMeal} className="border rounded p-2">
-                <img
-                  src={meal.strMealThumb}
-                  alt={meal.strMeal}
-                  className="w-full h-40 object-cover rounded"
-                />
-                <h2 className="mt-2 font-semibold">{meal.strMeal}</h2>
-              </div>
+              <Link to={`/Food/${meal.idMeal}`} key={meal.idMeal}>
+                <div className="border rounded p-2">
+                  <img
+                    src={meal.strMealThumb}
+                    alt={meal.strMeal}
+                    className="w-full h-40 object-cover rounded"
+                  />
+                  <h2 className="mt-2 font-semibold">{meal.strMeal}</h2>
+                </div>
+              </Link>
             ))
           : !isLoading && <p>No meals found.</p>}
       </div>

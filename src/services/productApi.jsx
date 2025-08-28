@@ -6,21 +6,21 @@ const client = axios.create({
 
 export async function foodsApi() {
   const response = await client.get('/filter.php?c=Seafood');
-  return response.data.meals; // ✅ درست
+  return response.data.meals; 
 } 
 
 export async function foodApi(id) {
-  const response = await client.get(`/lookup.php?i=${id}`); // ✅ endpoint درست
+  const response = await client.get(`/lookup.php?i=${id}`); 
   return response.data.meals; 
 }
 
 export async function categoriesApi() {
   const response = await client.get('/categories.php');
-  return response.data.categories; // ✅ درست
+  return response.data.categories; 
 } 
 
 export async function searchMeals(query) {
   const response = await client.get(`/search.php?s=${query}`);
-  return response.data.meals; // ✅ درست
+  return response.data.meals; 
 }
 

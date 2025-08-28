@@ -14,28 +14,32 @@ const Navbar: React.FC = () => {
         </Link>
 
         {/* Links */}
-        <ul
+        {/* <ul
           className={`${
             isOpen ? 'flex' : 'hidden'
           } md:flex flex-col md:flex-row gap-6 list-none absolute md:static top-16 left-0 w-full md:w-auto bg-green-900 md:bg-transparent text-center md:text-left p-4 md:p-0`}
         >
           <li>
-            {/* <Link className="hover:text-white" to="/about">
-              Contact
-            </Link> */}
+            <Link className="hover:text-white" to="/about">
+              Profile
+            </Link>
           </li>
-        </ul>
+        </ul> */}
 
         {/* Search + Profile + Cart */}
-        <div className="hidden md:flex items-center gap-4">
+        <ul
+          className={`${
+            isOpen ? 'flex' : 'hidden'
+          } md:flex flex-col md:flex-row gap-6 list-none absolute md:static top-16 left-0 w-full md:w-auto bg-green-900 md:bg-transparent text-center md:text-left p-4 md:p-0`}
+        >
           <input
             type="search"
             placeholder="Search"
-            className="rounded bg-amber-50 px-2 py-1 w-48 text-red-800 "
+            className="rounded bg-amber-50 px-2 py-1 w-48 text-red-800 mx-auto"
           />
           <p className="cursor-pointer">Profile</p>
           {/* <p className="cursor-pointer">Cart</p> */}
-        </div>
+        </ul>
 
         {/* Burger Menu */}
         <button

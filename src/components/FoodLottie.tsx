@@ -1,17 +1,17 @@
 // src/components/FoodLottie.tsx
 import { useEffect, useRef } from 'react';
 import Lottie, { LottieRefCurrentProps } from 'lottie-react';
-import Food from '../assets/Food.json'; // اگر alias نداری از مسیر نسبی استفاده کن: "../../assets/animations/food.json"
+import Food from '../assets/Food.json';
 import { Player } from '@lottiefiles/react-lottie-player';
 
 type FoodLottieProps = {
-  size?: number | string; // مثلا 192 یا "12rem" یا "240px"
+  size?: number | string;
   loop?: boolean;
   autoplay?: boolean;
-  speed?: number; // 1 = عادی، 0.5 = کندتر، 2 = سریع‌تر
+  speed?: number;
   className?: string;
   ariaLabel?: string;
-  hoverToPlay?: boolean; // روی هاور پخش/مکث کند
+  hoverToPlay?: boolean;
 };
 
 export default function FoodLottie({
@@ -51,7 +51,7 @@ export default function FoodLottie({
         lottieRef={lottieRef}
         animationData={Food}
         loop={loop}
-        autoplay={autoplay && !hoverToPlay} // اگر hoverToPlay=true باشد، اول مکث است
+        autoplay={autoplay && !hoverToPlay}
       />
     </div>
   );
