@@ -12,7 +12,7 @@ const Navbar: React.FC<NavbarProps> = ({ searchTerm, setSearchTerm }) => {
 
   return (
     <Container>
-      <nav className="flex justify-between items-center text-black px-6 h-16 relative z-50 mb-5">
+      <nav className="flex justify-between items-center text-amber-100 px-6 h-16 relative z-50 mb-5">
         {/* Logo */}
         <Link className="text-cyan-50" to="/">
           <h1 className="text-xl font-bold">Taste of the World</h1>

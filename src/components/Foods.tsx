@@ -46,11 +46,11 @@ const Foods: React.FC<FoodsProps> = ({ searchTerm }) => {
           {data.length > 0
             ? data.map((meal) => (
                 <Link to={`/Food/${meal.idMeal}`} key={meal.idMeal}>
-                  <div className="border rounded p-2">
+                  <div className="border rounded p-6">
                     <img
                       src={meal.strMealThumb}
                       alt={meal.strMeal}
-                      className="w-full h-30 gap-2 object-cover rounded"
+                      className="w-full h-50 gap-5  object-cover rounded"
                     />
                     <h2 className="mt-2 font-semibold text-amber-50 text-center">
                       {meal.strMeal}
