@@ -29,10 +29,12 @@ const Navbar: React.FC<NavbarProps> = ({ searchTerm, setSearchTerm }) => {
 
   return (
     <Container>
-      <nav className="flex justify-between items-center text-amber-100 px-6 h-16 relative z-50 mb-5">
+      <nav className="flex justify-between items-center text-amber-100 px-6 h-16 relative z-50 mb-5 sm:gap-3 sm:text-amber-200 sm:text-2xl">
         {/* Logo */}
-        <Link className="text-cyan-50" to="/">
-          <h1 className="text-xl font-bold">Taste of the World</h1>
+        <Link to="/">
+          <h1 className="text-xl md:font-bold sm:font-light sm:text-2xl sm:text-amber-200">
+            Taste of the World
+          </h1>
         </Link>
 
         {/* Search + Profile */}
@@ -42,10 +44,9 @@ const Navbar: React.FC<NavbarProps> = ({ searchTerm, setSearchTerm }) => {
             placeholder="Search meals..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="rounded bg-amber-50 px-2 py-1 w-55 text-neutral-800"
+            className="rounded bg-amber-50 px-2 py-1 md:w-55  text-neutral-800 text-sm"
           />
 
-          {/* لیست پیشنهادها */}
           {suggestions.length > 0 && (
             <ul className="absolute left-0 top-full w-55 bg-neutral-500 text-black rounded shadow mt-1 z-50 max-h-60 overflow-auto">
               {suggestions.slice(0, 5).map((meal) => (
@@ -62,12 +63,12 @@ const Navbar: React.FC<NavbarProps> = ({ searchTerm, setSearchTerm }) => {
             </ul>
           )}
 
-          <p className="cursor-pointer hidden md:block">Profile</p>
+          <p className="cursor-pointer hidden sm:block text-md">Profile</p>
         </div>
 
         {/* Burger Menu */}
         <button
-          className="md:hidden text-yellow-200 text-2xl"
+          className="sm:hidden text-yellow-200 text-2xl"
           onClick={() => setIsOpen(!isOpen)}
         >
           ☰
